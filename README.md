@@ -2,8 +2,6 @@
 ## Setup
 ```bash
 npm install
-yarn add react-router@3.*
-yarn add express
 ```
 ```bash
 yarn run dev
