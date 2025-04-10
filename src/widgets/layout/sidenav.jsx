@@ -43,13 +43,13 @@ export function Sidenav({ brandImg, brandName, routes }) {
         </Link>
         <IconButton
           variant="text"
-          color="white"
+          color={sidenavType === "dark"?"white":"black"}
           size="sm"
           ripple={false}
           className="absolute right-0 top-0 grid rounded-br-none rounded-tl-none xl:hidden"
           onClick={() => setOpenSidenav(dispatch, false)}
         >
-          <XMarkIcon strokeWidth={2.5} className="h-5 w-5 text-white" />
+          <XMarkIcon strokeWidth={2.5} className="h-5 w-5" />
         </IconButton>
       </div>
       <div className="m-4">
@@ -66,7 +66,7 @@ export function Sidenav({ brandImg, brandName, routes }) {
                 </Typography>
               </li>
             )}
-            {pages.map(({ icon, name, path }) => (
+            {pages.map(({ icon, name, aname, path }) => (
               <li key={name}>
                 <NavLink to={`/${layout}${path}`}>
                   {({ isActive }) => (
@@ -103,7 +103,7 @@ export function Sidenav({ brandImg, brandName, routes }) {
 
 Sidenav.defaultProps = {
   brandImg: "/img/HL_logo.png",
-  brandName: "Material Tailwind React",
+  brandName: "KKU Health Life",
 };
 
 Sidenav.propTypes = {

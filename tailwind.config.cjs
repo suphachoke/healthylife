@@ -7,7 +7,8 @@ module.exports = withMT({
     extend: {
       fontFamily: {
         prompt: ['Prompt','sans-serif'],
-        kanit: ['Kanit','sans-serif']
+        kanit: ['Kanit','sans-serif'],
+        sarabun: ['Sarabun','sans-serif'],
       }
     },
   },

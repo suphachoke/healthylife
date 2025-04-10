@@ -2,11 +2,10 @@ import {
   HomeIcon,
   UserCircleIcon,
   TableCellsIcon,
-  InformationCircleIcon,
-  ServerStackIcon,
-  RectangleStackIcon,
+  GiftIcon,
+  PlusCircleIcon,
 } from "@heroicons/react/24/solid";
-import { Home, Profile, Tables, Notifications } from "@/pages/dashboard";
+import { Home, Profile, Tables, Activities, Notifications } from "@/pages/dashboard";
 import { SignIn, SignUp } from "@/pages/auth";
 
 const icon = {
@@ -20,44 +19,37 @@ export const routes = [
       {
         icon: <HomeIcon {...icon} />,
         name: "dashboard",
+        aname: "แดชบอร์ด",
         path: "/home",
         element: <Home />,
       },
       {
         icon: <UserCircleIcon {...icon} />,
         name: "profile",
+        aname: "ประวัติ",
         path: "/profile",
         element: <Profile />,
       },
       {
+        icon: <PlusCircleIcon {...icon} />,
+        name: "your activities",
+        aname: "กิจกรรมที่ทำ",
+        path: "/activities",
+        element: <Activities />,
+      },
+      {
         icon: <TableCellsIcon {...icon} />,
-        name: "tables",
-        path: "/tables",
+        name: "join events",
+        aname: "เข้าร่วมการแข่งขัน",
+        path: "/events",
         element: <Tables />,
       },
       {
-        icon: <InformationCircleIcon {...icon} />,
-        name: "notifications",
-        path: "/notifications",
+        icon: <GiftIcon {...icon} />,
+        name: "rewards",
+        aname: "แลกรางวัล",
+        path: "/rewards",
         element: <Notifications />,
-      },
-    ],
-  },
-  {
-    title: "auth pages",
-    layout: "auth",
-    pages: [
-      {
-        icon: <ServerStackIcon {...icon} />,
-        name: "sign in",
-        path: "/sign-in",
-        element: <SignIn />,
-      },
-      {
-        icon: <RectangleStackIcon {...icon} />,
-        name: "sign up",
-        path: "/sign-up",
-        element: <SignUp />,
       },
     ],
   },
